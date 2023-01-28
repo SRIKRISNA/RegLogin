@@ -1,0 +1,55 @@
+
+/* register form */
+*{
+    background-color: rgb(243, 243, 243);
+    color: rgb(22, 22, 22);
+}
+input{
+    margin-bottom: 18px;
+    background-color: rgb(255, 255, 255);
+}
+
+input, button{
+    padding: 7px;
+    width: -webkit-fill-available;
+    border: none;
+}
+input{
+    width: 340px;
+}
+button{
+    cursor: pointer;
+    font-weight: bold;
+}
+.btns{
+}
+#regBtn{
+    background: rgb(200, 170, 233);
+    color: rgb(81, 0, 128);
+}
+#logBtn{
+    background: rgba(228, 170, 233, 0.336);
+    color: rgb(92, 0, 128);
+}
+button:hover{
+    opacity: 0.7;
+}
+.form-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.reg-container{
+    text-align: -webkit-center;
+    background: #fff;
+    height: 100vh;
+    display: flex;
+}
+.reg-form{
+    width: max-content;
+    padding: 10px 50px 50px;
+    box-shadow: 5px 5px 10px #879b6f73;
+    margin: auto;
+    border-radius: 10px;
+}
