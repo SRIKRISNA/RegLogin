@@ -44,7 +44,7 @@ function Register() {
         <div className="reg-container">
             <div className="reg-form">
                 <div className="form-title">
-                    <h1>Registration Form</h1>
+                    <h1>Registration</h1>
                 </div>
                 <div className="form-container">
                     <form>
@@ -55,8 +55,7 @@ function Register() {
                         </div>
                         <div className="btns">
                             <button onClick={handleSubmit} id='regBtn'>Register</button>
-                            <p>Already registered? click login</p>
-                            <Link to="/"> <button id='logBtn'>Login</button></Link>
+                            <Link to="/" style={{textDecoration:"none"}}><p style={{color:"red"}}>Member Login</p></Link>
                         </div>
                     </form>
                 </div>

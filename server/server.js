@@ -1,7 +1,7 @@
 const Express = require("express")
 const mongoose = require("mongoose")
 const cors = require("cors")
-const TodoController = require("./Routes/Todo")
+// const TodoController = require("./Routes/Todo")
 const UserController = require("./Routes/User")
 require("dotenv").config()
 
@@ -10,7 +10,7 @@ app.use(Express.json({limit:"30mb",extended:true}))
 app.use(cors())
 
 //mongodb+srv://yash:yash@app.fmxq6.mongodb.net/ContantManager
-const Connection_Url = "mongodb+srv://krishna:spkrishna@krishnacluster.xjap0dj.mongodb.net/dreamProject?retryWrites=true&w=majority"
+const Connection_Url = "mongodb+srv://krishna:spkrishna@krishnacluster.xjap0dj.mongodb.net/toodoo?retryWrites=true&w=majority"
 const Port = process.env.PORT || 5000;
 
 mongoose.connect(Connection_Url).then(()=>{
@@ -24,4 +24,4 @@ mongoose.connect(Connection_Url).then(()=>{
 })
 //controlling other pages
 app.use("/user",UserController)
-app.use("/todo",TodoController)
+// app.use("/todo",TodoController)

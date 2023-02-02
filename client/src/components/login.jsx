@@ -22,7 +22,8 @@ function Login() {
                 data: login
             }).then((res) => {
                 localStorage.setItem('authorization', res.data.AuthToken);
-                alert("login successful and connected to 'dashboard'");
+                localStorage.setItem('Name', login.userName);
+                alert(`Welcome ${login.userName}`);
                 Navigate("/dashboard");
                 // <Link to='/dashboard' />
             }).catch((err) => {
@@ -45,7 +46,7 @@ function Login() {
         <div className="reg-container">
             <div className="reg-form">
                 <div className="form-title">
-                    <h1>Login Form</h1>
+                    <h1>Member Login</h1>
                 </div>
                 <div className="form-container">
                     <form>
@@ -57,6 +58,7 @@ function Login() {
                             <button onClick={handleLogin} id='regBtn'>Login</button>
                             <p>New user? click register</p>
                            <Link to="/register"><button id='logBtn'>Register</button></Link>
+                           <p style={{color:"red"}}>Forgot Password?</p>
                         </div>
                     </form>
                 </div>
