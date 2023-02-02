@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Header from "./header";
 import Sidebar from "./sidebar";
 import Modal from 'react-bootstrap/Modal';
-import Button from 'react-bootstrap/Button';
+// import Button from 'react-bootstrap/Button';
 
 function Dashboard() {
 
@@ -24,7 +24,7 @@ function Dashboard() {
     const [activity, setActivity] = useState({activity: ""});
 
     useEffect(() => {
-        fetch('http://localhost:5000/todo', {
+        fetch('http://localhost:5000/todo/todoget', {
             method:'GET',
             headers:{
                 "Content-Type":"application/json",
@@ -66,12 +66,12 @@ function Dashboard() {
         <>
             <Header />
             <Sidebar />
-            <h1>Hello Dash</h1>
+            <h1>Todo Lists</h1>
             <div className="dashContainer">
                 <div className="addActivity">
-                    <Button className='addBtn' onClick={handleShow}>
+                    <button className='addBtn' onClick={handleShow}>
                         Add Activity
-                    </Button>
+                    </button>
                 </div>
                 <table>
                     <thead>
@@ -119,7 +119,7 @@ function Dashboard() {
                         <div className="activityInput">
                             <input type="text" placeholder='Add new Activity' onChange={(e)=> setActivity({...activity, activity: e.target.value})} />
                             <div className="activitySubmit">
-                                <button type="submit" style={{margin:"12px"}}>Save Activity</button>
+                                <button type="submit" id="hbtn" style={{margin:"12px"}}>Save Activity</button>
                             </div>
                         </div>
                     </form>

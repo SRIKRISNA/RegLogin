@@ -72,3 +72,21 @@ button:hover{
     font-size: 22px;
 
 }
+.addBtn{
+    float: right;
+}
+#hbtn, .addBtn{
+    width:max-content;
+    background: rgb(216, 216, 5);
+}
+.dashContainer{
+    width:75%;
+
+}
+table{
+    justify-content: space-between;
+}
+table, tr, td{
+    border: 1px solid gray;
+
+}
